@@ -8,7 +8,10 @@
 	<header class="main-header">
 		<a class="site-logo">Device</a>
 		<div class="user-interface">
-			<!-- Здесь будет форма поиска -->
+			<form class="search" method="post" action="">
+				<label for="search-input">Поиск девайсов</label>
+				<input id="search-input" type="text" name="input" placeholder="Квадракоптер">
+			</form>
 			<ul class="login-panel-list">
 				<li class="login-panel-item"><a href="#">Войти</a></li>
 			</ul>
@@ -38,7 +41,7 @@
 	</header>
 	<main class="main-container">
 		<h1 class="visually-hidden">Интернет магазин Device</h1>
-		<section class="hot-offer-slider">
+		<section class="main-slider">
 			<h2 class="visually-hidden">Горячее предложение</h2>
 			<ul class="slider-list">
 				<li class="slider-item">
@@ -130,9 +133,9 @@
 				</li>
 			</ul>
 			<ul class="slider-navigation">
-				<li class="slider-navigation-dot"><a href="#"></a></li>
-				<li class="slider-navigation-dot"><a href="#"></a></li>
-				<li class="slider-navigation-dot"><a href="#"></a></li>
+				<li class="slider-navigation-dot-current"><button type="button" aria-label="Кнопка для переключения элементов в слайдере"></button></li>
+				<li class="slider-navigation-dot"><button type="button" aria-label="Кнопка для переключения элементов в слайдере"></button></li>
+				<li class="slider-navigation-dot"><button type="button" aria-label="Кнопка для переключения элементов в слайдере"></button></li>
 			</ul>
 		</section>
 		<section class="popular-categories">
@@ -140,27 +143,27 @@
 			<ul class="categories-list">
 				<li class="categories-item">
 					<h3><a href="#">Виртуальная реальность</a></h3>
-					<p class="categories-item-image"><a href="#"><img src="img/popular-1.svg" alt="Виртуальная реальность"></a></p>
+					<p class="categories-item-image"><a href="#"><img src="img/popular-1.svg" width="160" height="160" alt="Виртуальная реальность"></a></p>
 				</li>
 				<li class="categories-item">
 					<h3><a href="#">Моноподы для селфи</a></h3>
-					<p class="categories-item-image"><a href="#"><img src="img/popular-2.svg" alt="Моноподы для селфи"></a></p>
+					<p class="categories-item-image"><a href="#"><img src="img/popular-2.svg" width="160" height="160" alt="Моноподы для селфи"></a></p>
 				</li>
 				<li class="categories-item">
 					<h3><a href="#">Экшн-камеры</a></h3>
-					<p class="categories-item-image"><a href="#"><img src="img/popular-3.svg" alt="Экшн-камеры"></a></p>
+					<p class="categories-item-image"><a href="#"><img src="img/popular-3.svg" width="160" height="160" alt="Экшн-камеры"></a></p>
 				</li>
 				<li class="categories-item">
 					<h3><a href="#">Фитнес-браслеты</a></h3>
-					<p class="categories-item-image"><a href="#"><img src="img/popular-4.svg" alt="Фитнес-браслеты"></a></p>
+					<p class="categories-item-image"><a href="#"><img src="img/popular-4.svg" width="160" height="160" alt="Фитнес-браслеты"></a></p>
 				</li>
 				<li class="categories-item">
 					<h3><a href="#">Умные часы</a></h3>
-					<p class="categories-item-image"><a href="#"><img src="img/popular-5.svg" alt="Умные часы"></a></p>
+					<p class="categories-item-image"><a href="#"><img src="img/popular-5.svg" width="160" height="160" alt="Умные часы"></a></p>
 				</li>
 				<li class="categories-item">
 					<h3><a href="#">Квадракоптеры</a></h3>
-					<p class="categories-item-image"><a href="#"><img src="img/popular-6.svg" alt="Квадракоптеры"></a></p>
+					<p class="categories-item-image"><a href="#"><img src="img/popular-6.svg" width="160" height="160" alt="Квадракоптеры"></a></p>
 				</li>
 			</ul>
 		</section>
@@ -193,10 +196,10 @@
 		<section class="logotypes">
 			<h2 class="visually-hidden">Логотипы компаний производителей</h2>
 			<ul class="logotypes-list">
-				<li class="logotypes-item"><img src="img/logo-1.png" width="260" height="100" alt="Jdi"></li>
-				<li class="logotypes-item"><img src="img/logo-2.png" width="260" height="100" alt="Gadgets"></li>
-				<li class="logotypes-item"><img src="img/logo-3.png" width="260" height="100" alt="GoPro"></li>
-				<li class="logotypes-item"><img src="img/logo-4.png" width="260" height="100" alt="Vivo"></li>
+				<li class="logotypes-item"><img src="img/logo-1.png" width="260" height="100" alt="Производитель товаров Jdi"></li>
+				<li class="logotypes-item"><img src="img/logo-2.png" width="260" height="100" alt="Производитель товаров Gadgets"></li>
+				<li class="logotypes-item"><img src="img/logo-3.png" width="260" height="100" alt="Производитель товаров GoPro"></li>
+				<li class="logotypes-item"><img src="img/logo-4.png" width="260" height="100" alt="Производитель товаров Vivo"></li>
 			</ul>
 		</section>
 		<section class="about-us">
@@ -221,19 +224,33 @@
 				<span class="detals-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
 				</span>
 			</p>
-			<a class="mini-map" href="#">
-				<img src="img/map-mini.jpg" width="560" height="222" alt="Карта проезда">
+			<a class="mini-map" href="#" aria-label="Ссылка на увеличенную карту проезда">
+				<img src="img/map-mini.jpg" width="560" height="222" alt="Карта проезда. Офис компании по адресу: г. Москва, ул. Строителей, д. 15">
 			</a>
 			<a class="contacts-us" href="#">Напишите нам</a>
 			<div class="contacts-line"></div>
 		</section>
-		<section class="contacts-us-modal">
-			<h2 class="contacts-title">Обратная связь с нами</h2>
-			<!-- Здесь будет форма поиска -->
+		<section class="write-us-modal">
+			<h2 class="write-us-title">Обратная связь с нами</h2>
+			<form class="write-us-from" method="post" action="">
+				<p>
+				<label for="write-form-name">Ваше имя:</label>
+				<input id="write-form-name" type="text" name="name" placeholder="Никита">	
+				</p>
+				<p>
+				<label for="write-form-email-adress">Ваш e-mail:</label>
+				<input id="write-form-email-adress" type="email" name="email-adress" placeholder="example@mail.com">	
+				</p>				
+				<p>
+				<label for="write-form-message">Текст письма:</label>
+				<input id="write-form-message" type="textaera" name="message" placeholder="Текст сообщения">	
+				</p>
+				<button type="submit">Отправить</button>
+			</form>
 		</section>
 		<div class="big-map-modal">
-			<img src="img/map-big.jpg" width="960" height="559" alt="Карта проезда">
-			<button></button>
+			<img src="img/map-big.jpg" width="960" height="559" alt="Карта проезда. Офис компании по адресу: г. Москва, ул. Строителей, д. 15.">
+			<button type="button" aria-label="Кнопка закрытия всплывающего окна с картой проезда"></button>
 		</div>
 	</main>
 	<footer class="main-footer">
@@ -262,9 +279,9 @@
 			</span>
 		</p>
 		<ul class="social-list">
-			<li class="social-item"><a href="#">Фейсбук</a></li>
-			<li class="social-item"><a href="#">Инстаграм</a></li>
-			<li class="social-item"><a href="#">Твиттер</a></li>
+			<li class="social-item"><a href="#" aria-label="Ссылка на сайт Фейсбук">Фейсбук</a></li>
+			<li class="social-item" aria-label="Ссылка на сайт Истраграм"><a href="#">Инстаграм</a></li>
+			<li class="social-item"><a href="#" aria-label="Ссылка на сайт Твиттер">Твиттер</a></li>
 		</ul>
 		<div class="footer-line"></div>
 	</footer>
