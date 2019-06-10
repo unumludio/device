@@ -10,7 +10,7 @@
 	<header class="main-header">
 		<a class="site-logo">Device</a>
 		<div class="user-interface">
-			<form class="search" method="post" action="">
+			<form class="search" method="post" action="#">
 				<label class="visually-hidden" for="search-input">Поиск девайсов</label>
 				<input id="search-input" type="text" name="input" placeholder="Поиск по сайту">
 			</form>
@@ -24,8 +24,8 @@
 		<h2 class="visually-hidden">Навигация по сайту</h2>
 			<ul class="main-navigation-list">
 				<li class="navigation-dropdown-catalog">
+					<a href="#">Каталог товаров</a>
 					<ul class="catalog-dropdown-list">
-						<li class="catalog-title-item"><a href="#">Каталог товаров</a></li>
 						<li class="catalog-dropdown-item"><a href="#">Виртуальная реальность</a></li>
 						<li class="catalog-dropdown-item"><a href="#">Моноподы для селфи</a></li>
 						<li class="catalog-dropdown-item"><a href="#">Экшн-камеры</a></li>
@@ -53,11 +53,11 @@
 						<span class="detals-description">Самая длинная палка для селфи доступна в нашем магазине.
 						Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
 						</span>
-						<a class="detals-more" href="#">Подробнее</a>
+						<a class="detals-more" href="#"><span>Подробнее</span></a>
 					</p>
 					<table class="product-properties">
-						<caption>Свойства продукта</caption>
-						<tr class="headline">
+						<caption class="visually-hidden">Свойства продукта</caption>
+						<tr class="headline visually-hidden">
 							<th class="headline-item">Свойство 1</th>
 							<th class="headline-item">Свойство 2</th>
 							<th class="headline-item">Свойство 3</th>
@@ -234,7 +234,7 @@
 		</section>
 		<section class="write-us-modal">
 			<h2 class="write-us-title">Обратная связь с нами</h2>
-			<form class="write-us-from" method="post" action="">
+			<form class="write-us-from" method="post" action="#">
 				<p>
 				<label for="write-form-name">Ваше имя:</label>
 				<input id="write-form-name" type="text" name="name" placeholder="Никита">	
@@ -245,7 +245,7 @@
 				</p>				
 				<p>
 				<label for="write-form-message">Текст письма:</label>
-				<input id="write-form-message" type="textaera" name="message" placeholder="Текст сообщения">	
+				<textarea name="message" id="write-form-message" placeholder="Текст сообщения"></textarea>
 				</p>
 				<button type="submit">Отправить</button>
 			</form>
@@ -282,7 +282,7 @@
 		</p>
 		<ul class="social-list">
 			<li class="social-item"><a href="#" aria-label="Ссылка на сайт Фейсбук">Фейсбук</a></li>
-			<li class="social-item" aria-label="Ссылка на сайт Истраграм"><a href="#">Инстаграм</a></li>
+			<li class="social-item"><a href="#" aria-label="Ссылка на сайт Истраграм">Инстаграм</a></li>
 			<li class="social-item"><a href="#" aria-label="Ссылка на сайт Твиттер">Твиттер</a></li>
 		</ul>
 		<div class="footer-line"></div>

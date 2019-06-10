@@ -30,7 +30,7 @@ body {
 	font-size: 18px;
 	line-height: 24px;
 	color: #000000;
-	text-transform: lowercase;
+	text-transform: none;
 
 	background-color: #ffffff;
 
@@ -109,13 +109,83 @@ a {
 	opacity: 0.3;
 }
 
-.main-navigation a {
+.main-navigation ul {
+	list-style: none;
+	text-transform: uppercase;
+}
+
+.main-navigation-list a {
 	font-family: "Gilroy ExtraBold", Arial, sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	color: #000000;
+	letter-spacing: 3px;
 }
 
-.main-navigation ul {
-	list-style: none;
+.main-navigation-list a:hover,
+.main-navigation-list a:focus {
+	opacity: 0.6;
+}
+
+.main-navigation-list a:active {
+	opacity: 0.3;
+}
+
+.catalog-dropdown-list a {
+	font-family: "Open Sans Light", Arial, sans-serif;
+	font-size: 15px;
+	line-height: 36px;
+	text-transform: none;
+	letter-spacing: unset;
+}
+
+.catalog-dropdown-list a:hover,
+.catalog-dropdown-list a:focus {
+	opacity: 0.6;
+}
+
+.catalog-dropdown-list a:active {
+	opacity: 0.3;
+}
+
+.hot-offer-slider a.detals-more {
+	display: flex;
+	width: 220px;
+	height: 40px;
+	color: #000000;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	justify-content: center;
+	align-items: center;
+}
+
+.hot-offer-slider a.detals-more:hover,
+.hot-offer-slider a.detals-more:focus {
+	background-color: #f0c52e;
+}
+
+.hot-offer-slider a.detals-more:active {
+
+}
+
+.hot-offer-slider a.detals-more span {
+/*	display: flex;
+	width: 220px;
+	height: 40px;*/
+}
+
+.hot-offer-slider a.detals-more span:active {
+	opacity: 0.3;
+}
+
+.detals-big-text {
+	font-size: 47px;
+	line-height: 56px;
+}
+
+.detals-description {
+	font-family: "Open Sans Light", Arial, sans-serif;
+	font-size: 15px;
+	line-height: 30px;
+	color: #464646;
 }
