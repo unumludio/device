@@ -23,7 +23,7 @@
 }
 
 body {
-	margin 0;
+	margin: 0;
 	padding: 0;
 
 	font-family: "Gilroy ExtraBold", Arial, sans-serif;
@@ -33,7 +33,6 @@ body {
 	text-transform: none;
 
 	background-color: #ffffff;
-
 }
 
 a {
@@ -61,8 +60,7 @@ a {
 	text-transform: uppercase;
 }
 
-.main-header .site-logo:hover,
-.main-header .site-logo:focus {
+.main-header .site-logo:hover {
 	opacity: 0.6;
 }
 
@@ -100,8 +98,7 @@ a {
 	color: #000000;
 }
 
-.user-interface a:hover,
-.user-interface a:focus {
+.user-interface a:hover {
 	opacity: 0.6;
 }
 
@@ -122,8 +119,7 @@ a {
 	letter-spacing: 3px;
 }
 
-.main-navigation-list a:hover,
-.main-navigation-list a:focus {
+.main-navigation-list a:hover {
 	opacity: 0.6;
 }
 
@@ -139,13 +135,16 @@ a {
 	letter-spacing: unset;
 }
 
-.catalog-dropdown-list a:hover,
-.catalog-dropdown-list a:focus {
+.catalog-dropdown-list a:hover {
 	opacity: 0.6;
 }
 
 .catalog-dropdown-list a:active {
 	opacity: 0.3;
+}
+
+.hot-offer-slider .slider-list {
+	list-style: none;
 }
 
 .hot-offer-slider a.detals-more {
@@ -159,19 +158,21 @@ a {
 	align-items: center;
 }
 
-.hot-offer-slider a.detals-more:hover,
-.hot-offer-slider a.detals-more:focus {
-	background-color: #f0c52e;
-}
-
-.hot-offer-slider a.detals-more:active {
-
-}
-
-.hot-offer-slider a.detals-more span {
-/*	display: flex;
+.hot-offer-slider a.detals-more::after {
+	content: '';
+	position: absolute;
 	width: 220px;
-	height: 40px;*/
+	height: 8px;
+	background-color: #f0c52e;
+	z-index: -1;
+}
+
+.hot-offer-slider a.detals-more:hover::after {
+	display: none;
+}
+
+.hot-offer-slider a.detals-more:hover {
+	background-color: #f0c52e;
 }
 
 .hot-offer-slider a.detals-more span:active {
@@ -183,9 +184,43 @@ a {
 	line-height: 56px;
 }
 
-.detals-description {
+.detals-description,
+.product-properties .property-description {
 	font-family: "Open Sans Light", Arial, sans-serif;
 	font-size: 15px;
 	line-height: 30px;
 	color: #464646;
+}
+
+.product-properties .property {
+	font-family: "Gilroy Light", Arial, sans-serif;
+	font-size: 36px;
+	line-height: 48px;
+}
+
+.slide-number {
+	font-size: 179px;
+	color: #ffffff;
+}
+
+.slider-navigation {
+	list-style: none;
+	display: flex;
+}
+.popular-categories ul {
+	list-style: none;
+	display: flex;
+}
+
+.popular-categories li {
+	padding: 3px;
+}
+
+.categories-list a {
+	color: #000000;
+}
+
+.categories-item-image {
+	display: block;
+	background-color: #f7e296;
 }
